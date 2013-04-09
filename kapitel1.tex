@@ -1,0 +1,67 @@
+\chapter{Grammatiken}
+\section{Symbole}
+Symbole sind alle verwendbaren Zeichen eines Alphabets.
+
+\section{Alphabet}
+Ein Alphabet, abgekürzt $\Sigma$, ist eine endliche Menge von einzelnen Symbolen. Ein Alphabet wird als endliche Menge von Symbolen definiert.
+
+$\Sigma = \{\smiley, a, Anton\}$
+
+Neben einzelnen Buchstaben können auch Wörter im Sinne der deutschen Sprache verwendet werden. Es können aber auch andere Symbole (\smiley) verwendet werden. Bei Verwendung von Wörtern als Symbole eines Alphabets ist aber zu beachten, dass bei der späteren Verwendung die einzelnen Buchstaben oder Teile des Wortes nicht als Symbole genommen werden dürfen, sondern das gesamte Wort als ein Symbol bezeichnet wird. Im hier verwendeten Fall darf also das große $A$ nicht als Symbol verwendet werden darf. ebenso dürfen auch keine Wortteile wie $ton$ nicht verwendet werden. Ein zulässiges Symbol ist allerdings das gesamte Wort $Anton$.
+
+\section{Wörter}
+Wörter werden aus Kombination von einzelnen Symbolen gebildet. Die bildbaren Wörter werden in einer Menge $\Sigma*$ gesammelt. Wird die Menge aller Wörter gebildet muss jetzt explizit das leere Wort $\epsilon$ angegeben werden. Auf Grund der in der Grammatik verwendeten Regeln wird die Menge der möglichen Wörter eingeschränkt. In unserem Beispiel kann die Menge aller Wörter so aussehen:
+
+$\Sigma* = \{\epsilon, \smiley, a, Anton, \smiley a, a Anton, \smiley Anton, a \smiley, Anton a, Anton \smiley, \smiley \smiley, ...\}$
+
+Die Menge wird gebildet, in dem erst das leere Wort, dann alle einstelligen Wörter, alle zweistelligen Wörter, alle dreistelligen Wörter usw. in die Menge integriert werden. Die Menge der Wörter ist unendlich, da die Länge der Wörter nicht bestimmt ist.
+
+Die Länge eines Wortes $|w|$ bezeichnet die Anzahl der für das Wort verwendeten Symbole.
+
+\begin{figure}[h]
+	$|\epsilon| = 0$
+	
+	$|a| = 1$
+	
+	$|Anton| = 1$
+	
+	$|aa| = 2$
+	\caption{Beispiele für Wortlängen}
+\end{figure}
+
+\section{Grammatiken}
+Eine Grammatik $G$ wird definiert durch:
+\begin{itemize}
+	\item eine Menge von Variablen $V=\{S,U\}$, die bei der Ableitung verschwinden,
+	\item eine Menge von Terminalsymbolen $\Sigma$, gelichbedeutend mit dem definierten Alphabet
+	\item ein Startsymbol $S \in V$
+	\item und eine Menge von Regeln $P$
+\end{itemize}
+
+Formal wird eine Grammatik also beschrieben als:
+
+$G = (V, \Sigma, S, P)$
+
+\subsection{Regeln}
+Eine Regel besteht aus einer linken und einer rechten Regelseite. Bei der Ableitung von Regeln wird der Ausdruck auf der linken Seite durch den Ausdruck auf der rechten Seite ersetzt.
+
+Bei der Regel $S \rightarrow Anton$ wird die Variable $S$ durch das Symbol $Anton$ ersetzt. 
+
+\subsection{Ableitung}
+Bei der Ableitung von Regeln beginnt man beim Startsymbol und ersetzt das Startsymbol durch den entsprechenden Ausdruck einer Regel, die auf das Startsymbol passt. Zwischen zwei Ableitungsschritten kommt dann ein Doppelpfeil ($\Rightarrow$).
+
+\begin{figure}[h]
+$S \rightarrow Anton$ \textbf{(Regel)}
+
+$S \Rightarrow Anton$ \textbf{(Ableitung)}
+\caption{Einfaches Beispiel für eine Ableitung}
+\end{figure}
+
+\subsection{Regelalternativen}
+Regeln können auch Alternativen enthalten, um mehr Möglichkeiten zu bieten Wörter zu erzeugen.
+Alternativen werden auf der rechten Regelseite durch ein Pipe-Symbol ($|$) eingeleitet.
+Eine Regel mit Alternativen könnte folgendermaßen aussehen:
+
+$S \rightarrow Anton | Anton \smiley | Anton a$
+
+Dadurch wären die Wörter $Anton$, $Anton \smiley$ und $Anton a$ für die Variable $S$ möglich.

@@ -1,0 +1,63 @@
+\documentclass[
+  12pt,			% Schriftgröße
+	a4paper,			% Papierformat
+	oneside,			% einseitiges Dokument
+	titlepage,			% es wird eine Titelseite verwendet
+	parskip=full,		% Abstand zwischen Absätzen (volle Zeile)=full halbe zeille = half
+	headings=normal,	% Größe der Überschriften verkleinern
+	BCOR=10mm,		% Bindekorrektur
+	final				% Status des Dokuments (final/draft)
+]{scrreprt}
+
+\usepackage{graphicx}
+\usepackage{wasysym}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage[
+	automark,		% Kapitelangaben in Kopfzeile automatisch erstellen
+	headsepline,		% Trennlinie unter Kopfzeile
+	ilines			% Trennlinie linksbündig ausrichten
+]{scrpage2}
+\usepackage{lmodern}	%Schriftbild in Adobe PDf sonst unleserlich
+ 
+%Formatierung geht ab hier los:
+ 
+\setkomafont{sectioning}{\normalcolor\bfseries} % Ändert Überschriftschriftart (nun mit Serifen)
+\onehalfspacing																	%Zeilenabstand 1,5 fach
+\KOMAoptions{DIV=last}		%Satzspiegel neu berechnen wegen 1,5 fach Zeilenabstand
+ 
+% Kopf- und Fußzeilen ------------------------------------------------------
+\pagestyle{scrheadings}
+ 
+% Kopf- und Fußzeile auch auf Kapitelanfangsseiten -------------------------
+\renewcommand*{\chapterpagestyle}{scrheadings}
+ 
+% Schriftform der Kopfzeile ------------------------------------------------
+\renewcommand{\headfont}{\normalfont}
+ 
+% Kopfzeile ----------------------------------------------------------------
+\ihead{\textit{\headmark}}
+\chead{}
+\chead{}
+\setlength{\headheight}{21mm} % Höhe der Kopfzeile
+\setheadwidth[0pt]{textwithmarginpar} % Kopfzeile über den Text hinaus verbreitern
+\setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile
+ 
+% Fußzeile -----------------------------------------------------------------
+%\ifoot{\copyright\ \autor}
+\cfoot{}
+\ofoot{\pagemark}
+
+\title{Automatentheorie und formale Sprachen}
+\subject{Script zur Lehrveranstaltung}
+\author{Florian Schleich}
+\subtitle{Prof. Annika Wagner}
+\publishers{\includegraphics[width=0.5\textwidth]{images/HS-Fulda-logo.pdf}}
+
+\begin{document}
+\maketitle
+
+\include{kapitel1}
+\end{document}
