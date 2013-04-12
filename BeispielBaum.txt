@@ -1,0 +1,9 @@
+\pstree[levelsep=8ex]{\Tcircle{R} }{
+	\Tcircle{D1}
+	\pstree{ \Tcircle{D2} }{
+		\Tcircle{D2.1}
+		\Tcircle{D2.2}
+	}
+	\Tcircle{D3}
+	\Tcircle{D4}
+}

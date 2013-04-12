@@ -1,16 +1,9 @@
 \chapter{Grammatiken}
-\pstree[levelsep=8ex]{\Tcircle{R} }{
-\Tcircle{D1}
-\pstree{ \Tcircle{D2} }{
-\Tcircle{D2.1}
-\Tcircle{D2.2}
-}
-\Tcircle{D3}
-\Tcircle{D4}
-}
+
+In diesem Kapitel lernen wir, wie man Grammatiken definiert und Wörter aus diesen Grammatiken erzeugt.
 
 \section{Symbole}
-Symbole sind alle verwendbaren Zeichen eines Alphabets.
+Symbole sind alle verwendbaren Zeichen um durch Kombination Wörter zu erschaffen.
 
 \section{Alphabet}
 Ein Alphabet, abgekürzt $\Sigma$, ist eine endliche Menge von einzelnen Symbolen. Ein Alphabet wird als endliche Menge von Symbolen definiert.
@@ -69,9 +62,189 @@ $S \Rightarrow Anton$ \textbf{(Ableitung)}
 
 \subsection{Regelalternativen}
 Regeln können auch Alternativen enthalten, um mehr Möglichkeiten zu bieten Wörter zu erzeugen.
+
 Alternativen werden auf der rechten Regelseite durch ein Pipe-Symbol ($|$) eingeleitet.
 Eine Regel mit Alternativen könnte folgendermaßen aussehen:
 
 $S \rightarrow Anton | Anton \smiley | Anton a$
 
 Dadurch wären die Wörter $Anton$, $Anton \smiley$ und $Anton a$ für die Variable $S$ möglich.
+
+\subsection{Rekursion in Regeln}
+\begin{figure}[h]
+	$S \rightarrow Anton G$
+	
+	$G \rightarrow \smiley | \smiley G$
+	\caption{Grammatik mit Rekursion}
+\end{figure}
+
+Rekursionen in Grammatiken können Wörter erzeugen, deren Länge (Betrag) unendlich lang sind. Eine mögliche Ableitung für die obige Grammatik könnte folgendermaßen lauten.
+
+\begin{figure}[h]
+	$S \Rightarrow Anton G$
+	
+	$\Rightarrow Anton \smiley G$
+	
+	$\Rightarrow Anton \smiley \smiley$
+	\caption{Ableitung für eine rekursive Grammatik}
+\end{figure}
+
+Wir sehen also, dass durch die Rekursion auf $G$ die Wörter unendlich lang werden können und durch das Symbol \smiley aufgefüllt werden. Des weitern stellen wir fest, dass Ableitungen erst enden, wenn alle Variablen entfernt, bzw. ersetzt wurden.
+
+\subsection{Mengen von Regeln}
+Als weitere Komponente für die Definition von Grammatiken wird die Menge aller Regeln der Grammatik benötigt. Im vorherigen Abschnitt haben wir gelernt, wie Regeln definiert werden. Die Menge der Regeln einer Grammatik ist eine Teilmenge des kartesische Produktes der Elemente aus $V$ und $\Sigma$. Das kartesische Produkt wird durch die Kombination aller Elemente einer Menge mit sämtlichen Elementen einer anderen Menge gebildet.
+
+\begin{figure}[h]
+	$A = \{0,1\}$
+	
+	$B = \{x\}$
+	
+	$A \times B = \{(0,x),(1,x)\}$
+	\caption{Kartesisches Produkt der Mengen A und B}
+\end{figure}
+
+Die Menge aller Regeln einer Grammatik wird nun durch $(V\cup\Sigma)^*\times(V\cup\Sigma)^*$ gebildet. Durch diese Definition lassen sich sämtliche Kombinationen aus Terminalsymbolen und Variablen auf beden Seiten der Regeln ausfstellen. Es ist aber meistens gewünscht nur ein paar bestimmte Regeln zuzulassen. Man bildet also eine bestimmte Teilmenge der eben gebildeten Gesamtmenge.
+
+\section{Kontextfrei oder regulär}
+Kontextfreie Grammatiken haben auf der linken Regelseite genau \textbf{eine} Variable und eine Beliebige Kombination aus Terminalsymbolen und Variablen auf der rechten Regelseite. Grammatiken sind regulär, wenn die verwendeten Regeln auf der linken Regelseite \textbf{eine} Variable und auf der rechten Seite entweder das leere Wort ($\epsilon$), genau ein Terminalsymbol oder genau ein Terminalsymbol und eine Variable besitzen.
+
+\section{Alternative Schreibweise für Grammatiken}
+Um Grammatiken und deren Regeln einfacher kommunizieren zu können kann man die erzeugten Wörter auch als "Formel" aufschreiben. Dazu folgende Aufgabe.
+
+\textbf{Aufgabe:} Sei $\Sigma = \{0,1\}$. Leiten Sie mit der folgenden Grammatik das Wort 0101001010 ab.
+
+\begin{figure}[h]
+$S \rightarrow 0T0$
+
+$T \rightarrow 1S1 | \epsilon$
+\end{figure}
+
+\textit{Ableitung:}
+\begin{figure}[h]
+	$S \Rightarrow 0T0$
+	
+	$\Rightarrow 01S10$
+	
+	$\Rightarrow 010T010$
+	
+	$\Rightarrow 0101S1010$
+	
+	$\Rightarrow 01010T01010$
+	
+	$\Rightarrow 0101001010$
+	\caption{Zugehörige Ableitung}
+\end{figure}
+
+Aus dieser Grammatik lassen sich folgende mögliche Wörter ableiten:
+
+\begin{itemize}
+	\item 00
+	\item 010010
+	\item 0101001010
+	\item ...
+\end{itemize}
+
+Da die Grammatik rekursiv ist und damit die Wortliste nicht endlich ist, kann man unmöglich alle Wörter auflisten. Um alle Wörter die erzeugt werden können trotzdem aufschrieben zu können, kann die Menge der Wörter auch formelähnlich aufgeschrieben werden.
+
+$\{(01)^n00(10)^n|n\geq0\}$
+
+Der erste Teil (01) ist genau so oft enthalten wie der letzte Teil (10) kann aber auch weggelassen werden. der mittlere Teil (00) ist immer vorhanden und kann auch nicht wiederholt werden. Durch diese vereinfachte Schreibweise ist es sehr leicht möglich weitere Wörter zu erzeugen. Man muss nur einen Wert für $n$ einsetzen und wiederholt die entsprechenden Teile $n$-mal.
+
+\textbf{Aufgabe:} Sei $\Sigma=\{0,1\}$. Entwicklen Sie eine Grammatik, die folgende Sprache erzeugt: $L=\{w \in \Sigma^* / |w|\;ist\;gerade\}$
+
+\textit{Ansatz:} Das das zu erzeugende Wort ($w$) ein $\Sigma^*$ enthalten sein soll, kann es also aus allen möglichen Kombinationen aus $\Sigma$ (0 und 1) bestehen. Als zusätzliche Beschränkung für die Menge aller Wörter soll der Betrag, also die Länge, des Wortes gerade (durch Zwei teilbar) sein.
+
+Aus dem obigen Ansatz ergeben sich folgende Regeln für die Grammatik.
+
+\begin{figure}[h]
+$S \rightarrow PS | P$ (beliebig viele Pärchen aneinanderreihen)
+
+$P \rightarrow ZZ | \epsilon$ (Pärchen von Zahlen aus Ziffern bilden)
+
+$Z \rightarrow 0|1$ (Ziffern)
+\end{figure}
+
+\begin{figure}[ht]
+$S \Rightarrow PS$
+
+$\Rightarrow PP$
+
+$\Rightarrow ZZP$
+
+$\Rightarrow ZZZZ$
+
+$\Rightarrow 0ZZZ$
+
+$\Rightarrow 01ZZ$
+
+$\Rightarrow 010Z$
+
+$\Rightarrow 0100$
+\caption{Mögliche Ableitung für das Wort 0100}
+\end{figure}
+
+\section{Ableitungsbaum}
+Aus dieser Ableitung lässt sich ein Ableitungsbaum erstellen. Dieser stellt strukturiert dar, wie ein Wort abgeleitet wird.
+
+\begin{figure}[h]
+\pstree[levelsep=8ex]{\Tcircle{S} }{
+	\pstree{ \Tcircle{P} }{
+		\pstree{ \Tcircle{Z} }{
+			\Tcircle{0}
+		}
+		\pstree{ \Tcircle{Z} }{
+			\Tcircle{1}
+		}
+	}
+	\pstree{ \Tcircle{S} }{
+		\pstree{ \Tcircle{P} }{
+			\pstree{ \Tcircle{Z} }{
+				\Tcircle{0}
+			}
+			\pstree{ \Tcircle{Z} }{
+				\Tcircle{0}
+			}
+		}
+	}
+}
+\caption{Ableitungsbaum für die obige Ableitung}
+\end{figure}
+
+Egal in welcher Reihenfolge abgeleitet wird, bleibt der Ableitungsbaum immer der selbe. Die Ableitung nach $S \Rightarrow PS \Rightarrow ZZS \Rightarrow ...$ oder nach $S \Rightarrow PS \Rightarrow PP \Rightarrow ...$ erzeugen den selben Ableitungsbaum. Anders sieht es aus, wenn eine andere Regelalternative zur Ableitung genutzt wird. Dann kann sich der Ableitungsbaum durchaus unterscheiden.
+
+Die Ableitung $S \Rightarrow PS \Rightarrow PPS \Rightarrow PPP \Rightarrow ZZPP \Rightarrow ZZZZP \Rightarrow ZZZZ\epsilon \Rightarrow ...$ erzeugt den folgenden Ableitungsbaum.
+
+\begin{figure}[ht]
+\pstree[levelsep=8ex]{\Tcircle{S} }{
+	\pstree{ \Tcircle{P} }{
+		\pstree{ \Tcircle{Z} }{
+			\Tcircle{0}
+		}
+		\pstree{ \Tcircle{Z} }{
+			\Tcircle{1}
+		}
+	}
+	\pstree{ \Tcircle{S} }{
+		\pstree{ \Tcircle{P} }{
+			\pstree{ \Tcircle{Z} }{
+				\Tcircle{0}
+			}
+			\pstree{ \Tcircle{Z} }{
+				\Tcircle{0}
+			}
+		}
+		\pstree{ \Tcircle{S} }{
+			\pstree{ \Tcircle{P} }{
+				\Tcircle{$\epsilon$}
+			}
+		}
+	}
+}
+\caption{Ableitungsbaum für eine alternative Ableitung}
+\end{figure}
+
+Da es für die hier verwendete Grammatik strukturell unterschiedliche Ableitungsbäume gibt, ist die Grammatik mehrdeutig. Daher ist es nicht möglich einen Parser für die erzeugte Sprache zu generieren.
+
+Durch Linksableitung kann Mehrdeutigkeit von Bäumen (Ableitungen) eindeutig bewiesen werden. Die Linksableitung ist eine Konvention, dass von Ableitungsschritt zu Ableitungsschritt die linkeste Variable zuerst abgeleitet wird.
+
+\emph{(Bilder der Vorlesung vom 10.04.13 einfügen!)}

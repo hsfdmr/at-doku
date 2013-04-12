@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.20)  4 APR 2013 18:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.1.20)  12 APR 2013 12:33
 entering extended mode
 **Automatentheorie.tex
 (C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.tex
@@ -136,32 +136,163 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("C:\Program Files (x86)\miktex\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-("C:\Program Files (x86)\miktex\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files (x86)\miktex\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-("C:\Program Files (x86)\miktex\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count89
+("C:\Program Files (x86)\miktex\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wasysym\wasysym.sty"
-Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
-\symwasy=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
-(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+("C:\Program Files (x86)\miktex\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2012/08/24 v0.53 LaTeX wrapper for `PSTricks' (RN,HV)
+
+("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pstricks.tex"
+("C:\Program Files (x86)\miktex\tex\generic\xkeyval\pst-xkey.tex"
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+("C:\Program Files (x86)\miktex\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files (x86)\miktex\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks15
+\XKV@tempa@toks=\toks16
+\XKV@depth=\count89
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+)))
+("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count90
+\pstFP@xia=\count91
+\pstFP@xib=\count92
+\pstFP@xfa=\count93
+\pstFP@xfb=\count94
+\pstFP@rega=\count95
+\pstFP@regb=\count96
+\pstFP@regs=\count97
+\pstFP@times=\count98
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
+\pgfutil@everybye=\toks17
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
+\pgfkeys@tmptoks=\toks20
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+\pgffor@iter=\dimen105
+\pgffor@skip=\dimen106
+\pgffor@stack=\toks21
+\pgffor@toks=\toks22
+)
+\psLoopIndex=\count99
+`PSTricks' v2.35  <2012/12/21> (tvz)
+\pst@dima=\dimen107
+\pst@dimb=\dimen108
+\pst@dimc=\dimen109
+\pst@dimd=\dimen110
+\pst@dimg=\dimen111
+\pst@dimh=\dimen112
+\pst@dimm=\dimen113
+\pst@dimn=\dimen114
+\pst@dimo=\dimen115
+\pst@dimp=\dimen116
+\pst@hbox=\box27
+\pst@ibox=\box28
+\pst@boxg=\box29
+\pst@cnta=\count100
+\pst@cntb=\count101
+\pst@cntc=\count102
+\pst@cntd=\count103
+\pst@cntg=\count104
+\pst@cnth=\count105
+\pst@cntm=\count106
+\pst@cntn=\count107
+\pst@cnto=\count108
+\pst@cntp=\count109
+\@zero=\count110
+\pst@toks=\toks23
+("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pstricks.con")
+\psunit=\dimen117
+\psxunit=\dimen118
+\psyunit=\dimen119
+\pst@C@@rType=\count111
+\pslinewidth=\dimen120
+\psk@startLW=\dimen121
+\psk@endLW=\dimen122
+\pst@customdefs=\toks24
+\pslinearc=\dimen123
+\pst@symbolStep=\dimen124
+\pst@symbolWidth=\dimen125
+\pst@symbolLinewidth=\dimen126
+\everypsbox=\toks25
+\psframesep=\dimen127
+\pslabelsep=\dimen128
+\pst@shift=\dimen129
+\theoverlaybox=\box30
+)
+File: pstricks.tex 2012/12/21 v2.35 `PSTricks' (tvz,hv)
+
+("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pst-fp.tex")
+File: pst-fp.tex 2012/12/21 v2.35 `PST-fp' (hv)
+
+("C:\Program Files (x86)\miktex\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\miktex\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pst-node\pst-node.sty"
+Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pst-node\pst-node.tex"
+ v1.25, 2012/09/21
+\psrow=\count112
+\pscol=\count113
+\psmatrixcnt=\count114
+\psrowsep=\skip47
+\pscolsep=\skip48
+\pst@args=\count115
+\num@pts=\count116
+\pst@argcnt=\count117
+)
+File: pst-node.tex 2012/09/21 1.25 `pst-node' (tvz,hv)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pst-tree\pst-tree.sty"
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pst-tree\pst-tree.tex"
+ v1.12, 2011/02/28(tvz,dg,hv)
+\pstree@rootbox=\box31
+\pstree@box=\box32
+\psnodecnt=\count118
+\pstreelevel=\count119
+\pstreecnt=\count120
+\pstree@cnt=\count121
+\pstree@stop=\count122
+)
+File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
 )
 ("C:\Program Files (x86)\miktex\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
 
 ("C:\Program Files (x86)\miktex\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
@@ -217,8 +348,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `sectioning' that is an alias of element
-(scrkbase)             `disposition' on input line 27.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 29.
+(scrkbase)             `disposition' on input line 38.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 40.
 
 ("C:\Program Files (x86)\miktex\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -239,133 +370,96 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 62.9806pt
 (typearea)              \baselineskip   = 17.99446pt
-(typearea)              on input line 29.
+(typearea)              on input line 40.
 
 (C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.aux
 (C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 72.
 
-("C:\Program Files (x86)\miktex\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
-\scratchdimen=\dimen105
-\scratchbox=\box27
-\nofMPsegments=\count91
-\nofMParguments=\count92
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count93
-\MPscratchDim=\dimen106
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
-\everyMPtoPDFconversion=\toks18
-)
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 61.
- ("C:\Program Files (x86)\miktex\tex\latex\lm\ot1lmr.fd"
+("C:\Program Files (x86)\miktex\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 61.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 72.
 
 ("C:\Program Files (x86)\miktex\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 61.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 72.
 
 
 ("C:\Program Files (x86)\miktex\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 61.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 72.
 
 
 ("C:\Program Files (x86)\miktex\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 61.
+(Font)              <17.28> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 61.
+(Font)              <12> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 61.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 61.
+(Font)              <10> on input line 72.
+File: images/HS-Fulda-logo.eps Graphic file (type eps)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
-<images/HS-Fulda-logo.pdf, id=1, 465.74pt x 92.345pt>
-File: images/HS-Fulda-logo.pdf Graphic file (type pdf)
-
-<use images/HS-Fulda-logo.pdf>
-Package pdftex.def Info: images/HS-Fulda-logo.pdf used on input line 61.
-(pdftex.def)             Requested size: 213.39569pt x 42.31152pt.
- [1
+<images/HS-Fulda-logo.eps> [1
 
 
 
-{C:/Users/Florian/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
-Florian/Documents/Latex/Automatentheorie/images/HS-Fulda-logo.pdf>]
+]
 (C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.tex
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
+(Font)              <6> on input line 9.
 [2
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 38.
  ("C:\Program Files (x86)\miktex\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 35.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 38.
  [3]
-Overfull \hbox (3.47212pt too wide) in paragraph at lines 61--64
+Overfull \hbox (3.47212pt too wide) in paragraph at lines 64--65
 \T1/lmr/m/n/12 Regeln kön-nen auch Al-ter-na-tiven en-thal-ten, um mehr Möglich
 keiten zu bi-eten Wörter
  []
 
-)
-Overfull \hbox (2.0408pt too wide) in paragraph at lines 67--62
+
+Overfull \hbox (6.60051pt too wide) in paragraph at lines 71--72
 []\T1/lmr/m/n/12 Dadurch wären die Wörter $\OML/lmm/m/it/12 Anton$\T1/lmr/m/n/1
 2 , $\OML/lmm/m/it/12 Anton[]$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 Antona$ \T1
 /lmr/m/n/12 für die Vari-able $\OML/lmm/m/it/12 S$ \T1/lmr/m/n/12 möglich. 
  []
 
-[4] (C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.aux
+[4] [5] [6] [7] [8]) [9]
+(C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.aux
 (C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.aux)) ) 
 Here is how much of TeX's memory you used:
- 3149 strings out of 493921
- 46338 string characters out of 3146474
- 125130 words of memory out of 3000000
- 6401 multiletter control sequences out of 15000+200000
- 49289 words of font info for 45 fonts, out of 3000000 for 9000
+ 5780 strings out of 493922
+ 87907 string characters out of 3146497
+ 211807 words of memory out of 3000000
+ 8992 multiletter control sequences out of 15000+200000
+ 48222 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 38i,9n,49p,741b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program 
-Files (x86)/miktex/fonts/enc/dvips/lm/lm-mathit.enc} <C:\Users\Florian\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\public\wasy\dpi720\wasy10.pk>{C:/Program Files
- (x86)/miktex/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/miktex/f
-onts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/miktex/fonts/enc/dvips/lm/l
-m-ec.enc}<C:/Program Files (x86)/miktex/fonts/type1/public/lm/lmbx12.pfb><C:/Pr
-ogram Files (x86)/miktex/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files (x8
-6)/miktex/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/miktex/fonts/
-type1/public/lm/lmr17.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/lm/
-lmri12.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Automatentheorie.pdf (4 pages, 129980 bytes).
-PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 40i,11n,59p,703b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on Automatentheorie.dvi (9 pages, 57304 bytes).

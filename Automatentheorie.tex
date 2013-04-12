@@ -10,8 +10,18 @@
 ]{scrreprt}
 
 \usepackage{graphicx}
-\usepackage{wasysym}
+%\usepackage{wasysym}
 \usepackage{pstricks,pst-node,pst-tree} %Für Bäume
+
+%%Smiley ;-)
+\newcommand{\smiley}{
+\begin{pspicture}(0.5,0.35)
+	\pscircle(0.25,0.15){0.2}
+	\qdisk(0.19,0.20){0.03}
+	\qdisk(0.31,0.20){0.03}
+	\psarc(0.25,0.15){0.1}{210}{330}
+\end{pspicture}
+}
 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -61,4 +71,5 @@
 \maketitle
 
 \include{kapitel1}
+\include{kapitel2}
 \end{document}
