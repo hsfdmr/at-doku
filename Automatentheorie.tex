@@ -23,6 +23,18 @@
 \end{pspicture}
 }
 
+\newcommand{\blitz}{
+\begin{pspicture}(0.25,0.25)
+	\psscalebox{0.5}{
+		\psline[linewidth=1pt](0.35,0.5)(0.15,0.25)
+		\psline[linewidth=0.5pt](0.15,0.25)(0.35,0.25)
+		\psline[linewidth=1pt](0.35,0.25)(0,0)
+		\psline[linewidth=1pt](0.15,0)(0,0)
+		\psline[linewidth=1pt](0,0.15)(0,0)
+	}
+\end{pspicture}
+}
+
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
@@ -69,6 +81,8 @@
 
 \begin{document}
 \maketitle
+
+\tableofcontents
 
 \include{kapitel1}
 \include{kapitel2}
