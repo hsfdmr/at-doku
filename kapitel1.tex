@@ -247,4 +247,46 @@ Da es für die hier verwendete Grammatik strukturell unterschiedliche Ableitungsb
 
 Durch Linksableitung kann Mehrdeutigkeit von Bäumen (Ableitungen) eindeutig bewiesen werden. Die Linksableitung ist eine Konvention, dass von Ableitungsschritt zu Ableitungsschritt die linkeste Variable zuerst abgeleitet wird.
 
-\emph{(Bilder der Vorlesung vom 10.04.13 einfügen!)}
+\subsection{Reflexiver \& transitiver Abschluss von $\Rightarrow$}
+Der Ableitungsoperator $\Rightarrow$ erlaubt es, nur einen Ableitungsschritt darzustellen. Der Ableitungsoperator $\Rightarrow^*$ hingegen erlaubt es beliebg viele Ableitungsschritte zusammenzufassen. Wird eine Grammatik mit dem einfachen Operator so abgeleitet $S \Rightarrow bB \Rightarrow bb$, kann die Ableitung mit dem reflexiven und trasitiven Abschluss so aussehen: $S \Rightarrow^* bb$. Dies spart Zeit und schreibarbeit, ist aber nicht so übersichtlich, da zwischeninformationen über die Ableitungen verloren gehen.
+
+\section{Greibach Normalform (GNF)}
+Die Greibach Normalform erzeugt bei jedem ableitungsschritt genau ein Terminalsymbol. Bei der GNF besteht die rechte Regelseite aus genau einem Terminalsymbol und beliebig vielen Variablen ($P \subseteq V \times \Sigma V^*$).
+
+Im folgenden werden Regeln besprochen, die aus einer kontextfreien Grammatik eine Grammatik in Greibach Normalform erzeugen.
+
+\subsection{Problem 1: Mehrere Terminalsymbole}
+Wenn eine Regel mehrere Terminalsymbole auf der rechten Regelseite besitzt, verstößt sie gegen die GNF. Um das Problem zu lösen, erzeugt man einfach eine neue Variable, die das Terminalsymbol ersetzt.
+
+\begin{figure}[h]
+
+$S \rightarrow aa$
+	
+\end{figure}
+
+Wird zu:
+
+\begin{figure}[h]
+	$S \rightarrow aA$
+	
+	$S \rightarrow a$
+\end{figure}
+
+\subsection{Problem 2: Mehrere Variablen, aber kein Terminalsymbol}
+Ein weiteres Problem entsteht, wenn zwar mehrere Variablen auf der rechten Regelseite stehen, aber kein Terminalsymbol vorhanden ist. Dazu wird die vorderste Variable durch die rechte Regelseite der Variable ersetzt.
+
+\begin{figure}[h]
+
+$S \rightarrow BS | c$
+
+$B \rightarrow b$
+	
+\end{figure}
+
+Wird zu:
+
+\begin{figure}[h]
+	$S \rightarrow bS | c$
+	
+	$B \rightarrow b$
+\end{figure}

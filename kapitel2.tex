@@ -1,2 +1,417 @@
 \chapter{Endliche Automaten}
-Endliche Automaten werden dazu genutzt um zu prüfen ob ein Wort auf eine bestimmte Grammatik passt. Diese Eigenschaft nutzt ein Parser um den Quellcode auf seine syntaktische Richtigkeit zu prüfen.
+Endliche Automaten werden dazu genutzt um zu prüfen ob ein Wort auf eine bestimmte Grammatik passt. Diese Eigenschaft nutzt ein Parser um den Quellcode auf seine syntaktische Richtigkeit zu prüfen. Um aus einer Grammatik einen Automat herzuleiten, ist es wichtig zu beachten, dass die Grammatik regulär ist.
+\section{Reguläre Grammatiken und deren Verabreitung}
+Endliche Automaten werden als Zustandsdiagramm dargestellt. Ein Zustandsdiagramm für eine Lampe lässt sich in Abbildung 
+\ref{fig:zustandLampe} finden.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 an & & aus & \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{1,3}^{\scriptsize{drücken}}
+	\ncarc[arcangle=12]{1,3}{1,1}^{\scriptsize{drücken}}
+	\ncarc[arcangle=12]{1,4}{1,3}
+
+	\caption{Zustandsdiagramm für eine Lampe}
+	\label{fig:zustandLampe}
+\end{figure}
+
+Mit jedem Druck auf eine Taste wird der Status der Lampe geändert. Der Startzustand ist dabei "aus".
+
+Ein Automat für die schon vorher besprochene Grammatik: "`Länge des Wortes gerade"', könnte nach einer kurzen Überlegung wie in Abbildung \ref{fig:zustandIntuGerade} aussehen.
+
+Die zugehörige formale Grammatik findet sich in Grafik \ref{fig:grammatikGerade}
+
+\begin{figure}[h]
+		$\Sigma = \{0,1\}$
+		
+		$S \rightarrow 0T | 1T | \epsilon$
+		
+		$T \rightarrow 0S | 1S$	
+
+	\label{fig:grammatikGerade}
+	\caption{Grammatik für Wörter mit gerader Länge}
+\end{figure}
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 . \\
+	 gerade & & ungerade \\
+	 \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+	\ncarc[arcangle=12]{2,1}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{2,1}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,1}{3,1}	
+
+	\caption{Intuitiver Automat für gerade Wörter}
+	\label{fig:zustandIntuGerade}
+\end{figure}
+
+Dieser Automat ist leicht zu verstehen. Wir kommen durch den Startzustand in den Zustand "gerade". Mit einem Eingabesymbol (1 oder 0) kommen wir in den Zustand "ungerade", da das Wort jetzt die Länge 1 hat und damit ungerade ist.Fügen wir ein weiteres Eingabesymbol an, kommen wir wieder in den Zustand "gerade". Da dieser Zustand auch gleichzeitig Endzustand ist, wird das Wort mit der Länge 2 erkannt.
+
+\section{Erzeugen von endlichen Automaten}
+Nun stellt sich aber die Frage, wie man aus einer regulären Grammatik einen endlichen Automaten ableitet. Für diese Problemstellung, gibt es ein Kochrezept, welches nun kurz vorgestellt wird.
+
+\subsection{Schritt 1: Zustände definieren}
+Zustände in Automaten sind gleichbedeutend mit den verwendeten Variablen der Grammatik. Für jede Variable, die in der Grammatik definiert wurde, gibt es auch ein speziellen Zustand. In unserem Fall wurden die Variablen $S$  und $T$ verwendet.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 S & & T
+	\endpsmatrix
+
+	\caption{Automat nach 1. Schritt}
+\end{figure}
+
+\subsection{Schritt 2: Startzustand einzeichnen}
+Der Startzustand ergibt sich aus der formalen Definition der Grammatik. Da Zustände gleichbedeutend mit Variablen sind, ist auch der Startzustand gleichbedeutend mit der Startvariable.
+
+Um einen Startzustand einzuzeichen, wird ein dickerer Punkt mittels Pfeil ohne Beschriftung auf den Startzustand gezeichnet.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 . \\
+	 S & & T
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+
+	\caption{Automat nach Schritt 2}
+\end{figure}
+
+\subsection{Schritt 3: Endzustände einzeichnen}
+Endzustände sind all diejenigen, bei denen die Verarbeitung eines Wortes aufhören kann. Klassischerweise enthält ein Endzustand das leere Wort ($\epsilon$). Allerdings kann die Verarbeitung auch bei einem einzelnen Terminalsymbol beendet werden. Dazu aber an späterer Stelle mehr. Ein Endzustand wird durch einen Punkt mit umschlossenen Kreis dargestellt. Auf diesen Kreis zeigt dann ausgehend von einem Endzustand ein Pfeil. Es kann durchaus vorkommen, dass es mehrere Endzustänge gibt, wohingegen nur ein Startzustand existieren darf.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 . \\
+	 S & & T \\
+	 \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+	\ncarc[arcangle=12]{2,1}{3,1}	
+
+	\caption{Automat nach dem 3. Schritt}
+\end{figure}
+
+\subsection{Schritt 4: Kanten einzeichnen}
+Eine Kante oder Transition in einem Automat, wird durch eine Regel erzeugt. Da die Regeln in einer regulären Grammatik immer einem einfachen Shema folgen, ist die Erstellung von Kanten kein Problem. Kanten werden durch Pfeile auf andere Zustände dargestellt. Der linke Regelteil definiert den Anfang des Pfeils. Im rechten Regelteil stehen immer ein Termianlsymbol gefolgt von einer Variable. Die Variable im rechten Regelteil gibt an, auf welchen Zustand die Kante zeigen soll. Das Terminalsymbol der rechten Regelseite wird an die Kante geschrieben.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 . \\
+	 S & & T \\
+	 \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+	\ncarc[arcangle=12]{2,1}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{2,1}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,1}{3,1}	
+
+	\caption{Automat nach Schritt 4}
+\end{figure}
+
+\subsection{Sonderfall bei regulären Grammatiken}
+Regüläre Grammatiken lassen auch Regeln nach dem Schema $s \rightarrow a$ zu. Diese Regeln können nach dem bisher besprochenen Schema nicht in eine Kante für einen Automaten umgewandelt werden. Um diese Art von Regeln zu behandeln, ist ein kleiner Trick von nöten. Man erzeugt einfach einen neuen Zustand. Dieser Zustand wird durch die Variable auf der linken Regelseite und das Terminalsymbol benannt ($S_a$). Die Kante die zu diesem Zustand führt wird mit dem Terminalsymbol beschriftet. Der neue Zustand wird dann selbst zu einen Endzustand. Im folgender Grafik nehmen wir an, dass eine Regel $S \rightarrow a$ existiert.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1]
+	 . & $S_a$ &\psdot(0,0)\\
+	 S & & T \\
+	 \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+	\ncarc[arcangle=12]{2,1}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{2,1}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,1}{3,1}
+	\ncarc[arcangle=12]{2,1}{1,2}^{\scriptsize{a}}
+	\ncarc[arcangle=12]{1,2}{1,3}
+
+	\caption{Automat mit zusätzlichem Zustand $S_a$}
+\end{figure}
+
+\section{Determinismus}
+In der Automaten Therorie wird zwischen deterministischen und nicht deterministischen Automaten unterschieden. Ein nicht deterministischer Automat hat mindestens eine der folgenden Eigenschaften.
+
+\paragraph{Uneindeutigkeit}
+Ein Automat ist uneindeutig, wenn es für einen Zustand in einem Terminalsymbol mehrere Kanten und damit Möglichkeiten weiterzugehen gibt.
+
+\paragraph{Unterspezifiziert}
+Umgekehrt kann ein Automat unterspezifiziert sein, wenn es für einen Zustand und ein Terminalsymbol keine ausgehende Kante gibt.
+
+Ist auch nur eine dieser Eigenschaften erfüllt, wird der Automat als nicht deterministisch eingestuft.
+
+\section{Suchbäume}
+Nicht deterministische Automaten sind nicht empfehlenswert. Um ein Wort zu parsen, was die Hauptaufgabe von Automaten ist, müssen bei nicht deterministischen Suchbäume eingesetzt werden. Um bei einem Suchbaum zu einem Ergebnis zu kommen, müssen möglicherweise alle Äste durchsucht werden. Dies begründet sich dadurch, dass bei nicht deterministischen Automaten mehrere Möglichkeiten existieren, ein Wort zu erkennen.
+
+\begin{figure}[h]
+		$\Sigma = \{a,b\}$
+		
+		$S \rightarrow aS | aT | a | b$
+		
+		$T \rightarrow bT | \epsilon$	
+
+	\label{fig:grammatikND}
+	\caption{Nicht deterministische Grammatik}
+\end{figure}
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=0.5,rowsep=0.5]
+	 .\\
+	 S & & T \\
+	 $S_a$ & $S_b$ & \psdot(0,0)\\ 
+	 \psdot(0,0) & \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,1}
+	\nccurve[angleA=100,angleB=180,offsetB=0,ncurvA=6,ncurvB=6]{2,1}{2,1}^{\scriptsize{a}}
+	\ncarc[arcangle=12]{2,1}{2,3}^{\scriptsize{a}}
+	\ncarc[arcangle=12]{2,1}{3,1}^{\scriptsize{a}}
+	\ncarc[arcangle=12]{2,1}{3,2}^{\scriptsize{b}}
+	\nccurve[angleA=80,angleB=0,offsetB=0,ncurvA=6,ncurvB=6]{2,3}{2,3}^{\scriptsize{b}}
+	\ncarc[arcangle=12]{2,3}{3,3}
+	\ncarc[arcangle=12]{3,1}{4,1}
+	\ncarc[arcangle=12]{3,2}{4,2}
+	
+
+	\caption{Nicht deterministischer Automat}
+\end{figure}
+
+\begin{figure}[h]
+\pstree[levelsep=8ex]{\Tcircle{S}}{
+	\pstree{ \Tcircle{$S_a$} }{
+			\Tcircle{\blitz}
+	}
+	\pstree{ \Tcircle{T} }{
+			\Tcircle{\blitz}
+	}
+	\pstree{ \Tcircle{S} }{
+		\pstree{ \Tcircle{$S_a$} }{
+				\Tcircle{\blitz}
+		}
+		\pstree{ \Tcircle{T} }{
+				\Tcircle{T}
+		}
+		\pstree{ \Tcircle{S} }{
+				\Tcircle{$S_b$}
+		}
+	}
+}
+\rput(1, -0.5){\psframebox[linewidth=0]{a}}
+\rput(1, -2){\psframebox[linewidth=0]{a}}
+\rput(1, -3.5){\psframebox[linewidth=0]{b}}
+\caption{Suchbaum für das Wort "aab"}
+\end{figure}
+
+Nicht deterministische Automaten müssen wie eingangs schon gesagt über Suchbäume verarbeitet werden. Dadurch, dass es mehrere Möglichkeiten gibt zu einem Ergebnis zu gelangen, muss der Suchbaum durch das Backtracking Verfahren traversiert werden. Der Aufwand beim Backtracking kann quadratisch zum zu parsenden Wort sein. Je nachdem wie schnell ein Ast gefunden wird, der das Wort vollständig erkennt. Bei deterministischen Automaten ist der Aufwand hingegen immer linear. Es werden genau so viele Schritte benötigt um das Wort zu erkennen, wie das Wort lang ist. Deterministische Automaten parsen wesentlich schneller, als nicht deterministische.
+
+\section{Lazy Evaluation Verfahren}
+Wir haben im letzten Abschnitt festgestellt, dass nicht deterministische Automaten nicht optimal sind. Ziel ist es einen dterministischen Automaten herzuleiten. Im folgenden wird ein Verfahren aufgezeigt, dass es ermöglicht aus einem nicht deterministischen einen deterministischen Automaten herzustellen.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=2,rowsep=0.5]
+	 . & & &  \psdot(0,0) & $B_0$ & \psdot(0,0)\\
+	 & S & A & B & $B_1$ & \psdot(0,0)\\
+	 & & & & $B_\#$ & \psdot(0,0)
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\nccurve[angleA=190,angleB=270,offsetB=0,ncurvA=6,ncurvB=6]{2,2}{2,2}^{\scriptsize{0,1}}
+	\nccurve[angleA=190,angleB=270,offsetB=0,ncurvA=7,ncurvB=7]{2,4}{2,4}^{\scriptsize{0,1,\#}}
+	\ncarc[arcangle=12]{1,1}{2,2}
+	\ncarc[arcangle=12]{2,2}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{2,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=-24]{2,2}{2,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{2,4}{1,4}
+	\ncarc[arcangle=12]{2,4}{1,5}^{\scriptsize{0}}
+	\ncarc[arcangle=12]{2,4}{2,5}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{2,4}{3,5}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{1,5}{1,6}
+	\ncarc[arcangle=12]{2,5}{2,6}
+	\ncarc[arcangle=12]{3,5}{3,6}
+
+	\caption{Beispiel für einen nicht deterministischen Automaten}
+\end{figure}
+
+\begin{figure}[h]
+\pstree[levelsep=8ex]{\Tcircle{S}}{
+	\pstree{ \Tcircle{S} }{
+			\pstree{ \Tcircle{S} }{
+					\pstree{\Tcircle{B}} {
+						\pstree{\Tcircle{B}}{}
+						\pstree{\Tcircle{$B_0$}}{}
+					}
+			}
+			\pstree{ \Tcircle{A} }{
+					\pstree{\Tcircle{B}} {
+						\pstree{\Tcircle{B}}{}
+						\pstree{\Tcircle{$B_0$}}{}
+					}
+			}
+	}
+	\pstree{ \Tcircle{A} }{
+			\Tcircle{\blitz}
+	}
+}
+\rput(1, -0.5){\psframebox[linewidth=0]{0}}
+\rput(1, -2){\psframebox[linewidth=0]{0}}
+\rput(1, -3.5){\psframebox[linewidth=0]{\#}}
+\rput(1, -5){\psframebox[linewidth=0]{0}}
+\caption{Zugehöriger Suchbaum für das Wort "00\#0"}
+\end{figure}
+
+Wir werden den nachweislich nicht deterministischen Automaten mit Hilfe des Lazy Evaluation Verfahren einen equivalenten deterministischen Automaten bilden.
+
+\subsection{Schritt 1: Startzustand}
+Der Startzustand des NEA (nicht deterministischer endlicher Automat) wird zum neuen Startzustand des DEA (deterministischer endlicher Automat).
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=2,rowsep=0.5]
+	 . \\
+	 & $\{S\}$
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,2}
+
+	\caption{Automat nach dem ersten Schritt}
+\end{figure}
+
+\subsection{Schritt 2: Folgezustand für Startzustand}
+Wir nehmen nun den Startzustand und überprüfen für jedes Eingabesymbol (Terminalsymbol), welche Folgezustände es im NEA gibt. Diese Folgezustände werden als Menge zusammengefasst und als einen eigenen Zustand im DEA erzeugt.
+
+Für den Startzustand ergeben sich folgende Folgezustände:
+
+\begin{figure}[h]
+	$S \stackrel{0}{\longrightarrow} \{S, A\}$
+	
+	$S \stackrel{1}{\longrightarrow} \{S, A\}$
+	
+	$S \stackrel{\#}{\longrightarrow} \{B\}$
+\end{figure}
+
+Da für die Eingabesymbole 0 und 1 die Folgezustände gleich sind, werden hierfür keine neuen Zustände eingezeichnet. Es wrd lediglich eine neue Kante mit dem Eingabesymbol eingezeichnet.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=2,rowsep=0.5]
+	 . & $\{S,A\}$\\
+	 & $\{S\}$ & $\{B\}$
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,2}
+	\ncarc[arcangle=12]{2,2}{1,2}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,2}{2,3}^{\scriptsize{\#}}
+
+	\caption{Automat nach dem zweiten Schritt}
+\end{figure}
+
+\subsection{Schritt 3: Folgezustand für weitere Zustände}
+Nun nehmen wir die eben eingezeichneten Folgezustände des Startzustandes und errechnen wieder die Folgezustände für alle Eingabesymbole. Errechnet wird ein Folgezustand, indem wir die Folgezustände für das entsprechende Eingabesymbol für alle Elemente der Menge im Zustand in eine neue Menge vereinigen.
+
+Die Folgezustände für den Zustand $\{S,A\}$ werden berechnet:
+
+\begin{figure}[h]
+	$S \stackrel{0}{\longrightarrow} \{S, A\}$
+	
+	$A \stackrel{0}{\longrightarrow} \{\}$
+	
+	(vereinigen: ) $\{S,A\} \cup \{\} = \{S,A\}$
+\end{figure}
+
+Der Folgezustand von $\{S,A\}$ mit dem Eingabesymbol 0 ist also $\{S,A\}$. Wir zeichenen also einen Verweis auf sich selbst. Alnalog zu diesem Schema werden auch die Folgezustände für die anderen Eingabesymbole (1 und \#) berechnet und eingezeichnet.
+
+Dieser Schritt wird solange wiederholt, bis der Automat deterministisch ist. Deterministisch ist ein Automat, wenn er für alle Eingabesymbole genau eine ausgehende Kante hat.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1,rowsep=0.5]
+	 .\\
+	 & $\{S\}$ & $\{S,A\}$\\
+	 & & $\{B\}$\\
+	 & $\{B,B_0\}$ & $\{B,B_1\}$ & $\{B,B_\#\}$\\
+	 \\
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,2}
+	\ncarc[arcangle=12]{2,2}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,2}{3,3}^{\scriptsize{\#}}
+	\nccurve[angleA=90,angleB=0,offsetB=0,ncurvA=6,ncurvB=6]{2,3}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{3,3}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{3,3}{4,2}^{\scriptsize{0}}
+	\ncarc[arcangle=12]{3,3}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{3,3}{4,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{4,2}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{4,3}{4,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{4,4}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{4,3}{4,2}^{\scriptsize{0}}
+	\nccurve[angleA=250,angleB=250,offsetB=0,ncurvA=0.25,ncurvB=0.25]{4,2}{4,4}^{\scriptsize{\#}}
+	\nccurve[angleA=280,angleB=280,offsetB=0,ncurvA=0.5,ncurvB=0.5]{4,4}{4,2}^{\scriptsize{0}}
+
+	\caption{Automat nach dem dritten Schritt}
+\end{figure}
+
+\subsection{Schritt 4: Endzustände}
+Jeder Zustand des neu angelegten DEA, der mindestens ein Element enthält, dass im NEA auch schon ein Endzustand war, wird zu einem neuen Endzustand.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1,rowsep=2]
+	 .\\
+	 & $\{S\}$ & $\{S,A\}$\\
+	 & & $\{B\}$ & \psdot(0,0)\\
+	 & $\{B,B_0\}$ & $\{B,B_1\}$ & $\{B,B_\#\}$\\
+	 & \psdot(0,0) & \psdot(0,0) & \psdot(0,0) \\
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	\ncarc[arcangle=12]{1,1}{2,2}
+	\ncarc[arcangle=12]{2,2}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,2}{3,3}^{\scriptsize{\#}}
+	\nccurve[angleA=90,angleB=0,offsetB=0,ncurvA=6,ncurvB=6]{2,3}{2,3}^{\scriptsize{0,1}}
+	\ncarc[arcangle=12]{2,3}{3,3}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{3,3}{4,2}^{\scriptsize{0}}
+	\ncarc[arcangle=12]{3,3}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{3,3}{4,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{4,2}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{4,3}{4,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=12]{4,4}{4,3}^{\scriptsize{1}}
+	\ncarc[arcangle=12]{4,3}{4,2}^{\scriptsize{0}}
+	\nccurve[angleA=250,angleB=250,offsetB=0,ncurvA=0.25,ncurvB=0.25]{4,2}{4,4}^{\scriptsize{\#}}
+	\nccurve[angleA=280,angleB=280,offsetB=0,ncurvA=0.5,ncurvB=0.5]{4,4}{4,2}^{\scriptsize{0}}
+	\ncarc[arcangle=12]{3,3}{3,4}
+	\ncarc[arcangle=-12]{4,2}{5,2}
+	\ncarc[arcangle=0]{4,3}{5,3}
+	\ncarc[arcangle=12]{4,4}{5,4}
+
+	\caption{Automat nach dem dritten Schritt}
+\end{figure}
+
+Nach der Optimierung nach dem Lazy Evaluation Verfahren wird für das Wort 00\#0 folgender Suchbaum erzeugt.
+
+\begin{figure}[h]
+	\psmatrix[mnode=circle,colsep=1,rowsep=2]
+	 $\{S\}$ & $\{S, A\}$ & $\{S, A\}$ & $\{B\}$ & $\{B, B_0\}$
+	\endpsmatrix
+	\psset{shortput=nab,arrows=->,labelsep=3pt}
+	\small
+	
+	\ncarc[arcangle=0]{1,1}{1,2}^{\scriptsize{0}}
+	\ncarc[arcangle=0]{1,2}{1,3}^{\scriptsize{0}}
+	\ncarc[arcangle=0]{1,3}{1,4}^{\scriptsize{\#}}
+	\ncarc[arcangle=0]{1,4}{1,5}^{\scriptsize{0}}
+\end{figure}
+
+Wir erkennen, dass der zugehörige Suchbaum um ein vielfaches geschrumpft ist und zu dem auch linearisiert wurde. Das  bringt enorme Geschwindigkeitsvorteile.
