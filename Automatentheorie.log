@@ -1,39 +1,34 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.1.20)  12 APR 2013 12:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2013.4.22)  1 MAY 2013 20:39
 entering extended mode
 **Automatentheorie.tex
-(C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.tex
+(C:\Users\Marvelous\Desktop\at-doku\Automatentheorie.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrreprt.cls"
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
+, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
+ian, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
+-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
+elsh, loaded.
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrreprt.cls
 Document Class: scrreprt 2012/07/29 v3.11b KOMA-Script document class (report)
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrkbase.sty"
-Package: scrkbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-dependent 
-basics and keyval usage)
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.sty
+Package: scrkbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
 
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrbase.sty"
-Package: scrbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-independent
- basics and keyval usage)
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
+Package: scrbase 2012/07/29 v3.11b KOMA-Script package (KOMA-Script-independent basics and keyval usage)
 
-("C:\Program Files (x86)\miktex\tex\latex\graphics\keyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrlfile.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.sty
 Package: scrlfile 2012/06/15 v3.12 KOMA-Script package (loading files)
 
 Package scrlfile, 2012/06/15 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) ("C:\Program Files (x86)\miktex\tex\latex\koma-script\tocbasic.sty"
+))) (C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.sty
 Package: tocbasic 2012/04/04 v3.10b KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
@@ -62,14 +57,12 @@ Class scrreprt Info: You've used standard option `final'.
 (scrreprt)           If you'd like to set the option with \KOMAoptions,
 (scrreprt)           you'd have to use `draft=false' there
 (scrreprt)           instead of `final', too.
-Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 1367.
+Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input line 1367.
 
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrsize12pt.clo"
-File: scrsize12pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (12p
-t)
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize12pt.clo
+File: scrsize12pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (12pt)
 )
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\typearea.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.sty
 Package: typearea 2012/07/29 v3.11b KOMA-Script package (type area)
 
 Package typearea, 2012/07/29 v3.11b KOMA-Script package (type area)
@@ -124,44 +117,43 @@ Package typearea Info: These are the values describing the layout:
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) ("C:\Program Files (x86)\miktex\tex\latex\graphics\graphicx.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\miktex\tex\latex\graphics\graphics.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\miktex\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\miktex\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: dvips.def on input line 91.
 
-("C:\Program Files (x86)\miktex\tex\latex\graphics\dvips.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvips.def"
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files (x86)\miktex\tex\latex\pstricks\pstricks.sty"
-Package: pstricks 2012/08/24 v0.53 LaTeX wrapper for `PSTricks' (RN,HV)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2013/04/05 v0.54 LaTeX wrapper for `PSTricks' (RN,HV)
 
-("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pstricks.tex"
-("C:\Program Files (x86)\miktex\tex\generic\xkeyval\pst-xkey.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 
-("C:\Program Files (x86)\miktex\tex\latex\xkeyval\xkeyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
-("C:\Program Files (x86)\miktex\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks15
 \XKV@tempa@toks=\toks16
 \XKV@depth=\count89
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 )))
-("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pst-fp.tex"
-`pst-fp' v0.05, 2010/01/17 (hv)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex" `pst-fp' v0.05, 2010/01/17 (hv)
 \pstFP@xs=\count90
 \pstFP@xia=\count91
 \pstFP@xib=\count92
@@ -172,26 +164,25 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 \pstFP@regs=\count97
 \pstFP@times=\count98
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
-x"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks17
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks18
 \pgfkeys@temptoks=\toks19
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
-ode.tex"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks20
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.code.tex
 \pgffor@iter=\dimen105
 \pgffor@skip=\dimen106
 \pgffor@stack=\toks21
 \pgffor@toks=\toks22
 )
 \psLoopIndex=\count99
-`PSTricks' v2.35  <2012/12/21> (tvz)
+
+`PSTricks' v2.41  <2013/04/17> (tvz)
 \pst@dima=\dimen107
 \pst@dimb=\dimen108
 \pst@dimc=\dimen109
@@ -217,7 +208,7 @@ ode.tex"
 \pst@cntp=\count109
 \@zero=\count110
 \pst@toks=\toks23
-("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pstricks.con")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.con")
 \psunit=\dimen117
 \psxunit=\dimen118
 \psyunit=\dimen119
@@ -233,18 +224,20 @@ ode.tex"
 \everypsbox=\toks25
 \psframesep=\dimen127
 \pslabelsep=\dimen128
-\pst@shift=\dimen129
+\sh@wgridXunit=\dimen129
+\sh@wgridYunit=\dimen130
+\pst@shift=\dimen131
 \theoverlaybox=\box30
 )
-File: pstricks.tex 2012/12/21 v2.35 `PSTricks' (tvz,hv)
+File: pstricks.tex 2013/04/17 v2.41 `PSTricks' (tvz,hv)
 
-("C:\Program Files (x86)\miktex\tex\generic\pstricks\base\pst-fp.tex")
-File: pst-fp.tex 2012/12/21 v2.35 `PST-fp' (hv)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex")
+File: pst-fp.tex 2013/04/17 v2.41 `PST-fp' (hv)
 
-("C:\Program Files (x86)\miktex\tex\latex\xcolor\xcolor.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\miktex\tex\latex\00miktex\color.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: dvips.def on input line 225.
@@ -257,12 +250,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pst-node\pst-node.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-node\pst-node.sty
 Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
 Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pst-node\pst-node.tex"
- v1.25, 2012/09/21
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-node\pst-node.tex  v1.27, 2013/04/12
 \psrow=\count112
 \pscol=\count113
 \psmatrixcnt=\count114
@@ -272,13 +264,12 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 \num@pts=\count116
 \pst@argcnt=\count117
 )
-File: pst-node.tex 2012/09/21 1.25 `pst-node' (tvz,hv)
+File: pst-node.tex 2013/04/12 1.27 `pst-node' (tvz,hv)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pst-tree\pst-tree.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-tree\pst-tree.sty
 Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pst-tree\pst-tree.tex"
- v1.12, 2011/02/28(tvz,dg,hv)
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-tree\pst-tree.tex  v1.12, 2011/02/28(tvz,dg,hv)
 \pstree@rootbox=\box31
 \pstree@box=\box32
 \psnodecnt=\count118
@@ -289,29 +280,49 @@ Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
 )
 File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
 )
-("C:\Program Files (x86)\miktex\tex\latex\base\inputenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip49
+\fb@frw=\dimen132
+\fb@frh=\dimen133
+\FrameRule=\dimen134
+\FrameSep=\dimen135
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\soul\soul.sty"
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks26
+\SOUL@lasttoken=\toks27
+\SOUL@cmds=\toks28
+\SOUL@buffer=\toks29
+\SOUL@token=\toks30
+\SOUL@spaceskip=\skip50
+\SOUL@ttwidth=\dimen136
+\SOUL@uldp=\dimen137
+\SOUL@ulht=\dimen138
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
 
-("C:\Program Files (x86)\miktex\tex\latex\base\latin1.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("C:\Program Files (x86)\miktex\tex\latex\base\fontenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\miktex\tex\latex\base\t1enc.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files (x86)\miktex\tex\latex\koma-script\scrpage2.sty"
+(C:\Users\Marvelous\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrpage2.sty
 Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
 LaTeX Info: Redefining \pagemark on input line 176.
 )
-("C:\Program Files (x86)\miktex\tex\latex\lm\lmodern.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -348,10 +359,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `sectioning' that is an alias of element
-(scrkbase)             `disposition' on input line 38.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 40.
-
-("C:\Program Files (x86)\miktex\tex\latex\lm\t1lmr.fd"
+(scrkbase)             `disposition' on input line 60.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 62.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package typearea Info: These are the values describing the layout:
@@ -370,96 +380,123 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 62.9806pt
 (typearea)              \baselineskip   = 17.99446pt
-(typearea)              on input line 40.
-
-(C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.aux
-(C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 72.
-
-("C:\Program Files (x86)\miktex\tex\latex\lm\ot1lmr.fd"
+(typearea)              on input line 62.
+ (C:\Users\Marvelous\Desktop\at-doku\Automatentheorie.aux (C:\Users\Marvelous\Desktop\at-doku\kapitel1.aux)
+(C:\Users\Marvelous\Desktop\at-doku\kapitel2.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 94.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 72.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 94.
 
-("C:\Program Files (x86)\miktex\tex\latex\lm\omllmm.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 72.
-
-
-("C:\Program Files (x86)\miktex\tex\latex\lm\omslmsy.fd"
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 94.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 72.
-
-
-("C:\Program Files (x86)\miktex\tex\latex\lm\omxlmex.fd"
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 94.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 72.
+(Font)              <17.28> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 72.
+(Font)              <12> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 72.
+(Font)              <10> on input line 94.
 File: images/HS-Fulda-logo.eps Graphic file (type eps)
-
-<images/HS-Fulda-logo.eps> [1
+ <images/HS-Fulda-logo.eps> [1
 
 
 
 ]
-(C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.tex
+(C:\Users\Marvelous\Desktop\at-doku\Automatentheorie.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 2.
+ [2
+
+])
+\tf@toc=\write3
+ [3] (C:\Users\Marvelous\Desktop\at-doku\kapitel1.tex
 Chapter 1.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 9.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 9.
-[2
+[4
 
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 38.
- ("C:\Program Files (x86)\miktex\tex\latex\lm\omslmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 38.
- [3]
-Overfull \hbox (3.47212pt too wide) in paragraph at lines 64--65
-\T1/lmr/m/n/12 Regeln kön-nen auch Al-ter-na-tiven en-thal-ten, um mehr Möglich
-keiten zu bi-eten Wörter
+ [5]
+Overfull \hbox (3.47212pt too wide) in paragraph at lines 67--68
+\T1/lmr/m/n/12 Regeln kön-nen auch Al-ter-na-tiven en-thal-ten, um mehr Möglichkeiten zu bi-eten Wörter
+ []
+
+[6]
+Overfull \hbox (6.60051pt too wide) in paragraph at lines 74--75
+[]\T1/lmr/m/n/12 Dadurch wären die Wörter $\OML/lmm/m/it/12 Anton$\T1/lmr/m/n/12 , $\OML/lmm/m/it/12 Anton[]$ \T1/lmr/m/
+n/12 und $\OML/lmm/m/it/12 Antona$ \T1/lmr/m/n/12 für die Vari-able $\OML/lmm/m/it/12 S$ \T1/lmr/m/n/12 möglich. 
  []
 
 
-Overfull \hbox (6.60051pt too wide) in paragraph at lines 71--72
-[]\T1/lmr/m/n/12 Dadurch wären die Wörter $\OML/lmm/m/it/12 Anton$\T1/lmr/m/n/1
-2 , $\OML/lmm/m/it/12 Anton[]$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 Antona$ \T1
-/lmr/m/n/12 für die Vari-able $\OML/lmm/m/it/12 S$ \T1/lmr/m/n/12 möglich. 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7]
+Overfull \hbox (9.37279pt too wide) in paragraph at lines 122--123
+[] \T1/lmr/bx/n/12 Voll-ständigkeit[][] \T1/lmr/m/n/12 Eine Gram-matik ist voll-ständig, wenn sie (alle) Wörter der Spra
+che
  []
 
-[4] [5] [6] [7] [8]) [9]
-(C:\Users\Florian\Documents\Latex\Automatentheorie\Automatentheorie.aux
-(C:\Users\Florian\Documents\Latex\Automatentheorie\kapitel1.aux)) ) 
+[8] [9] [10] [11]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 289.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 289.
+ [12] [13]) [14] (C:\Users\Marvelous\Desktop\at-doku\kapitel2.tex
+Chapter 2.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15
+
+
+
+]
+Overfull \hbox (7.6969pt too wide) in paragraph at lines 72--73
+\T1/lmr/m/n/12 Der Startzu-s-tand ergibt sich aus der for-malen Def-i-ni-tion der Gram-matik. Da Zustände
+ []
+
+[16] [17]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] [19] [20] [21] [22] [23]) [24] (C:\Users\Marvelous\Desktop\at-doku\Automatentheorie.aux
+(C:\Users\Marvelous\Desktop\at-doku\kapitel1.aux) (C:\Users\Marvelous\Desktop\at-doku\kapitel2.aux)) ) 
 Here is how much of TeX's memory you used:
- 5780 strings out of 493922
- 87907 string characters out of 3146497
- 211807 words of memory out of 3000000
- 8992 multiletter control sequences out of 15000+200000
- 48222 words of font info for 40 fonts, out of 3000000 for 9000
+ 6092 strings out of 493922
+ 93006 string characters out of 3144887
+ 237685 words of memory out of 3000000
+ 9280 multiletter control sequences out of 15000+200000
+ 61726 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 40i,11n,59p,703b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,59p,703b,660s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Automatentheorie.dvi (9 pages, 57304 bytes).
+Output written on Automatentheorie.dvi (24 pages, 242716 bytes).
