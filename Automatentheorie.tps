@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1092
-NormalPos.bottom=434
+NormalPos.right=1322
+NormalPos.bottom=698
 Class=LaTeXView
-Document=kapitel2.tex
+Document=kapitel1.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=194
+TopLine=121
+Cursor=6702
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1092
-NormalPos.bottom=434
+NormalPos.right=1322
+NormalPos.bottom=698
 Class=LaTeXView
 Document=Automatentheorie.tex
 
 [Frame1_View0,0]
-TopLine=48
-Cursor=2423
+TopLine=0
+Cursor=650
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1092
-NormalPos.bottom=434
+NormalPos.right=1322
+NormalPos.bottom=698
 Class=LaTeXView
-Document=kapitel1.tex
+Document=kapitel2.tex
 
 [Frame2_View0,0]
-TopLine=256
-Cursor=10694
+TopLine=163
+Cursor=6692
 
 [SessionInfo]
 FrameCount=3

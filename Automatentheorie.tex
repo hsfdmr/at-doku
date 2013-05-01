@@ -12,6 +12,9 @@
 \usepackage{graphicx}
 %\usepackage{wasysym}
 \usepackage{pstricks,pst-node,pst-tree} %Für Bäume
+\usepackage{framed}  %Fuer die Hinweisbox
+\usepackage{soul} %Fuer farbige Unterstreichungen
+\usepackage{color} %Fuer schreibbare Farben wie z. B. red
 
 %%Smiley ;-)
 \newcommand{\smiley}{
@@ -34,6 +37,13 @@
 	}
 \end{pspicture}
 }
+
+% Hinweisbox
+\newenvironment{balken}{
+  \def\FrameCommand##1{\textcolor{red}{\vrule width 3pt} \hspace{10pt}##1}
+  \MakeFramed {\advance\hsize-\width \FrameRestore}}
+ {\endMakeFramed}
+\newcommand*{\hinweis}{\hspace{-15pt}\colorbox{red}{\textbf{\textcolor{white}{ HINWEIS }}}} 
 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
